@@ -1,0 +1,20 @@
+Test Case ID	Test Scenario	Preconditions	Test Steps	Expected Result
+TC_01	Verify base API URL setup	Postman or API client available	1. Open Postman or API tool.2. Set base URL as https://jsonplaceholder.typicode.com.3. Send a GET request to /users.	API responds successfully  and returns user list.
+TC_02	Verify authorization header setup	Valid token available	1. Add request header Authorization: THIS-IS-A-FAKE-TOKEN.2. Add Content-Type: application/json.3. Send any GET request.	Request header successfully includes authorization token. Response should not fail due to missing token.
+TC_03	Fetch a random customer from /users	Base URL and token configured	1. Send GET request to /users.2. Verify list of users is returned.3. Randomly pick a customer and note ID and email.	Random customer ID and email displayed successfully in response.
+TC_04	Validate customer ID and email data	Customer list fetched	1. Verify selected customer has valid ID (>0).2. Verify email field is present and correctly formatted.	"Customer ID > 0, and email format is valid."
+TC_05	Fetch posts for the selected customer	Valid customer ID available	1. Send GET request to /posts?userId={customerId}.2. Validate posts returned belong to that user.	Posts retrieved successfully for given customer ID.
+TC_06	Validate post IDs range	Posts fetched for customer	1. Verify all post IDs are between 1 and 100.2. Scroll through JSON response and confirm range.	All post IDs are within 1–100 range. No invalid IDs found.
+TC_07	Print post titles and IDs	Posts available in response	1. Extract id and title from each post.2. Print or log them in console.	Post IDs and titles printed successfully for each record.
+TC_08	Select a random post from customer’s portfolio	Posts available for customer	"1. From /posts response, pick a random post record.2. Store postId."	Random post selected successfully and stored for next action.
+TC_09	Update post details using PUT request	Valid post ID and endpoint /posts/{id}	"1. Send PUT request to /posts/{postId} with updated title field in JSON.2. Example: {""title"": ""Updated Post Title 202""}.3. Submit request."	Post updated successfully. API returns  with updated title and post ID in response.
+TC_10	Verify updated post ID and title	Post successfully updated	1. Check response body.2. Validate id matches updated post.3. Confirm title field reflects new value.	Response displays correct post ID and updated title.
+TC_11	Create a new post for the selected customer	Valid customer ID	"1. Send POST request to /posts with body:{""userId"": 5, ""title"": ""New post"", ""body"": ""Post details...""}2. Submit request."	New post created successfully. API returns 201 Created with new post ID.
+TC_12	Verify valid response status code for post creation	POST request executed	1. Check status code in response.2. Expected status: 201.	"API returns status code 201, confirming successful creation."
+				
+				
+				
+				
+				
+				
+				
