@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-Feature: Validate Loan IQ Core Banking API functionality
-=======
-<<<<<<< HEAD
-Feature: Validate Loan IQ Core Banking API functionality
-=======
-<<<<<<< HEAD
-Feature: Validate Loan IQ Core Banking API functionality
-=======
 Feature: Validate API functionality
->>>>>>> e725196 (QA Automation API Testing)
->>>>>>> 1651632 (QA Automation API Testing)
->>>>>>> 8a57429 (QA Automation API Testing)
 
   Background:
     Given the base API URL is "https://jsonplaceholder.typicode.com"
